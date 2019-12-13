@@ -92,6 +92,7 @@
 - キムワイプ [日本製紙クレシア キムワイプ S-200 mini 62015 1個入](https://www.amazon.co.jp/dp/B00CWA23P6)
 - 10倍ルーペ [PEAK ルーペ10× 1961 東海産業](https://www.amazon.co.jp/dp/B00VJV37GI)
 - 棒ヤスリ [タミヤ クラフトツールシリーズ No.104 ベーシックヤスリセット (細目 ダブルカット) 74104](https://www.amazon.co.jp/dp/B00CE3L96K)
+- 作業マット [iMagitek 断熱ワーキングマット耐熱500℃](https://www.amazon.co.jp/gp/product/B07BPJVQQ9)
 
 あと家にあるものでも良いので、爪楊枝と、カッターマットがあれば用意してください。  
 オプションのLEDのデバッグには両端がオスのジャンパ線が1本あるととてもはかどります。
