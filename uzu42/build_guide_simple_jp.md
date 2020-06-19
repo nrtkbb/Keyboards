@@ -125,7 +125,7 @@
 
 [![自作キーボード作ってみた uzu42編 in 遊舎工房](https://i.ytimg.com/vi/h2fBtLVtGxc/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBfOEK7seJuJ_9tmNCbFyDkxOJHLQ)](https://www.youtube.com/watch?v=h2fBtLVtGxc)  
 [Daihukuさん](https://twitter.com/Daihuku0015)がYoutubeに[自作キーボード作ってみた uzu42編 in 遊舎工房](https://www.youtube.com/watch?v=h2fBtLVtGxc)というビルドログを公開してくださっています。  
-とても丁寧な説明で、初心者が陥りがちなポイントについて詳しくご説明くださっているので、ぜひ初めにご確認いただくことをおすすめします。
+LED版の組み立て動画ですが、とても丁寧な説明で、初心者が陥りがちなポイントについて詳しくご説明くださっているので、ぜひ初めにご確認いただくことをおすすめします。
 
 
 #### （初心者向け）はんだ付け動画
@@ -512,9 +512,9 @@ OLED_DRIVER_ENABLE = yes      # OLED display
 
 | ![switch keycap](./img/simple/12_switch_keycap/switch_keycap_1.jpg) | ![switch keycap](./img/simple/12_switch_keycap/switch_keycap_2.jpg) |
 | ---- | ---- |
-| スイッチは、たまに端子が曲がってることがありますので、一つ一つ目視しながら挿していきます | キーキャップもはめたら完成です |
+| あとはキーキャップだけです | 完成です！ |
 | ![plate](./img/simple/12_switch_keycap/switch_keycap_3.jpg) | |
-| こちらのボトムプレートは付属のパーツではなく[遊舎工房のキーボードアクリルプレートサービス](https://yushakobo.jp/shop/keyboard_acrylic_plate/)を利用して購入したアクリルにしてみました。ご興味のある方はぜひ！ | |
+| こちらのボトムプレートは付属のパーツではなく[遊舎工房のキーボードアクリルプレートサービス](https://yushakobo.jp/shop/keyboard_acrylic_plate/)を利用して購入したアクリルにしてみました。ご興味ある方はぜひ！ | |
 
 
 ### 完成
