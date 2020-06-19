@@ -58,8 +58,6 @@
     - [Auxケーブル 0.5M オーディオケーブル 赤 | Amazon](https://www.amazon.co.jp/gp/product/B07N36N7YW)
 1. OLEDモジュール（ピンソケット付き）：2個（オプション）
     - [OLEDモジュール | 遊舎工房](https://yushakobo.jp/shop/oled/) ※ピンソケット付きを選択してください
-1. SK6812MINI：54個（オプション）
-    - [SK6812MINI 35個入り | 遊舎工房](https://yushakobo.jp/shop/sk6812mini-35/) ※54個以上になるようにご購入ください
 1. USB-A to Micro-USBケーブル：1本
     - [USB micro ケーブル 赤 | Amazon](https://www.amazon.co.jp/s?k=usb+micro+ケーブル+赤&__mk_ja_JP=カタカナ)
     - [USB Cables | ZAP!CABLES](https://zapcables.com/diy-parts-kits/usb/)
@@ -110,15 +108,14 @@
 1. ProMicro のモゲ対策
 1. PCB の分割
 1. ProMicro へコンスルーのはんだ付け
-1. （オプション）LED のはんだ付け
 1. ダイオードのはんだ付け
 1. タクトスイッチ、TRRS ジャックのはんだ付け
 1. ケーブルを繋いで動作確認
 1. ソケットのはんだ付け
 1. （オプション）OLEDのはんだ付け
-1. ネジ止め
+1. ネジ止めとスイッチ
 1. ゴム足の接着
-1. スイッチとキーキャップの装着
+1. キーキャップの装着
 1. 完成！
 
 一つずつ、詳しく見ていきます。
