@@ -22,7 +22,7 @@
 1. トッププレート：2枚
 1. ボトムプレート：2枚
 1. ProMicro保護プレート：2枚
-1. LED実装用治具（通称いもけんぴ）：21個
+1. LED実装用治具（通称いもけんぴ）：21個（おまけ）
 
 | ![parts list](./img/00_parts/parts_14.jpg) |  ![parts list](./img/00_parts/parts_13.jpg) | ![parts list](./img/00_parts/parts_11.jpg) | ![parts list](./img/00_parts/parts_9.jpg) |
 | ---- | ---- | ---- | ---- |
