@@ -152,20 +152,23 @@ https://youtu.be/vqKKElJ1vw0
 https://docs.qmk.fm/#/newbs_getting_started  
 
 uzu42 は QMK Configurator や QMK Toolbox には対応していないため、上記URLを参考にビルド環境の構築を行ってください。  
-具体的には `git` をインストールし `Set Up QMK` を行ってください。
+具体的には `qmk` をインストールし `qmk setup` を行ってください。
 
 正しく qmk_firmware の環境が構築できたら、先に ProMicro にファームウェアを書き込み、正常に書き込める個体かどうかを確認しておきます。  
 ```
-make uzu42:default
+qmk compile -kb uzu42 -km default
 ```
 とするとビルドが実行されます。
 ```
-$ make uzu42:default
-QMK Firmware 0.7.28
+$ qmk compile -kb uzu42 -kb default
+INFO Compiling keymap with make uzu42:default
+
+
+QMK Firmware 0.9.46
 Making uzu42/rev1 with keymap default
 
-avr-gcc (GCC) 7.3.0
-Copyright (C) 2017 Free Software Foundation, Inc.
+avr-gcc.exe (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -175,22 +178,25 @@ Compiling: keyboards/uzu42/keymaps/default/keymap.c                             
 Compiling: quantum/quantum.c                                                                        [OK]
 Compiling: quantum/keymap_common.c                                                                  [OK]
 Compiling: quantum/keycode_config.c                                                                 [OK]
+Compiling: quantum/matrix_common.c                                                                  [OK]
 Compiling: quantum/split_common/matrix.c                                                            [OK]
 Compiling: quantum/debounce/sym_g.c                                                                 [OK]
 Compiling: quantum/split_common/split_util.c                                                        [OK]
 Compiling: quantum/split_common/transport.c                                                         [OK]
 Compiling: quantum/color.c                                                                          [OK]
 Compiling: quantum/rgblight.c                                                                       [OK]
+Compiling: quantum/process_keycode/process_rgb.c                                                    [OK]
 Compiling: drivers/avr/ws2812.c                                                                     [OK]
 Compiling: quantum/led_tables.c                                                                     [OK]
-Compiling: drivers/oled/oled_driver.c                                                               [OK]
 Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
-Compiling: quantum/split_common/serial.c                                                            [OK]
-Archiving: .build/obj_uzu42_rev1_default/quantum/split_common/serial.o                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
 Compiling: drivers/avr/i2c_master.c                                                                 [OK]
 Archiving: .build/obj_uzu42_rev1_default/i2c_master.o                                               [OK]
 Compiling: drivers/avr/i2c_slave.c                                                                  [OK]
 Archiving: .build/obj_uzu42_rev1_default/i2c_slave.o                                                [OK]
+Compiling: drivers/avr/serial.c                                                                     [OK]
+Archiving: .build/obj_uzu42_rev1_default/serial.o                                                   [OK]
 Compiling: tmk_core/common/host.c                                                                   [OK]
 Compiling: tmk_core/common/keyboard.c                                                               [OK]
 Compiling: tmk_core/common/action.c                                                                 [OK]
@@ -200,6 +206,7 @@ Compiling: tmk_core/common/action_layer.c                                       
 Compiling: tmk_core/common/action_util.c                                                            [OK]
 Compiling: tmk_core/common/print.c                                                                  [OK]
 Compiling: tmk_core/common/debug.c                                                                  [OK]
+Compiling: tmk_core/common/sendchar_null.c                                                          [OK]
 Compiling: tmk_core/common/util.c                                                                   [OK]
 Compiling: tmk_core/common/eeconfig.c                                                               [OK]
 Compiling: tmk_core/common/report.c                                                                 [OK]
@@ -229,33 +236,35 @@ Linking: .build/uzu42_rev1_default.elf                                          
 Creating load file for flashing: .build/uzu42_rev1_default.hex                                      [OK]
 Copying uzu42_rev1_default.hex to qmk_firmware folder                                               [OK]
 Checking file size of uzu42_rev1_default.hex                                                        [OK]
- * The firmware size is fine - 25994/28672 (90%, 2678 bytes free)
 ```
 と表示されればビルドは正しく行えています。  
 書き込みは、
 ```
-make uzu42:default:avrdude
+qmk flash -kb uzu42 -kb default
 ```
 というコマンドを実行します。  
 すると、以下のようになります。
 ```
-$ make uzu42:default:avrdude
-QMK Firmware 0.7.28
-Making uzu42/rev1 with keymap default and target avrdude
+$ qmk flash -kb uzu42 -kb default
+INFO Compiling keymap with make uzu42:default:flash
 
-avr-gcc (GCC) 7.3.0
-Copyright (C) 2017 Free Software Foundation, Inc.
+
+QMK Firmware 0.9.46
+Making uzu42/rev1 with keymap default and target flash
+
+avr-gcc.exe (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Size before:
-   text	   data	    bss	    dec	    hex	filename
-      0	  25994	      0	  25994	   658a	.build/uzu42_rev1_default.hex
+   text    data     bss     dec     hex filename
+      0   20064       0   20064    4e60 .build/uzu42_rev1_default.hex
 
 Copying uzu42_rev1_default.hex to qmk_firmware folder                                               [OK]
 Checking file size of uzu42_rev1_default.hex                                                        [OK]
- * The firmware size is fine - 25994/28672 (90%, 2678 bytes free)
-Detecting USB port, reset your controller now...
+ * The firmware size is fine - 20064/28672 (69%, 8608 bytes free)
+Detecting USB port, reset your controller now.
 ```
 この時、USBでPCに接続している ProMicro の RST と GND をピンセットなどで両方触れてショートさせることで実際に書き込みが開始されます。  
 
@@ -265,8 +274,8 @@ Detecting USB port, reset your controller now...
 
 上手くいくと、
 ```
-Device /dev/tty.usbmodem1412401 has appeared; assuming it is the controller.
-Waiting for /dev/tty.usbmodem1412401 to become writable.
+Device /dev/ttyS12 has appeared; assuming it is the controller.
+Remapped MSYS2 USB port to COM13
 
 Connecting to programmer: .
 Found programmer: Id = "CATERIN"; type = S
@@ -277,35 +286,35 @@ Programmer supports buffered memory access with buffersize=128 bytes.
 Programmer supports the following devices:
     Device code: 0x44
 
-avrdude: AVR device initialized and ready to accept instructions
+avrdude.exe: AVR device initialized and ready to accept instructions
 
 Reading | ################################################## | 100% 0.00s
 
-avrdude: Device signature = 0x1e9587 (probably m32u4)
-avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
-         To disable this feature, specify the -D option.
-avrdude: erasing chip
-avrdude: reading input file ".build/uzu42_rev1_default.hex"
-avrdude: input file .build/uzu42_rev1_default.hex auto detected as Intel Hex
-avrdude: writing flash (25994 bytes):
+avrdude.exe: Device signature = 0x1e9587 (probably m32u4)
+avrdude.exe: NOTE: "flash" memory has been specified, an erase cycle will be performed
+             To disable this feature, specify the -D option.
+avrdude.exe: erasing chip
+avrdude.exe: reading input file ".build/uzu42_rev1_default.hex"
+avrdude.exe: input file .build/uzu42_rev1_default.hex auto detected as Intel Hex
+avrdude.exe: writing flash (20064 bytes):
 
-Writing | ################################################## | 100% 2.06s
+Writing | ################################################## | 100% 1.52s
 
-avrdude: 25994 bytes of flash written
-avrdude: verifying flash memory against .build/uzu42_rev1_default.hex:
-avrdude: load data flash data from input file .build/uzu42_rev1_default.hex:
-avrdude: input file .build/uzu42_rev1_default.hex auto detected as Intel Hex
-avrdude: input file .build/uzu42_rev1_default.hex contains 25994 bytes
-avrdude: reading on-chip flash data:
+avrdude.exe: 20064 bytes of flash written
+avrdude.exe: verifying flash memory against .build/uzu42_rev1_default.hex:
+avrdude.exe: load data flash data from input file .build/uzu42_rev1_default.hex:
+avrdude.exe: input file .build/uzu42_rev1_default.hex auto detected as Intel Hex
+avrdude.exe: input file .build/uzu42_rev1_default.hex contains 20064 bytes
+avrdude.exe: reading on-chip flash data:
 
-Reading | ################################################## | 100% 0.25s
+Reading | ################################################## | 100% 0.19s
 
-avrdude: verifying ...
-avrdude: 25994 bytes of flash verified
+avrdude.exe: verifying ...
+avrdude.exe: 20064 bytes of flash verified
 
-avrdude: safemode: Fuses OK (E:FB, H:D8, L:FF)
+avrdude.exe done.  Thank you.
 
-avrdude done.  Thank you.
+
 ```
 と表示されて完了します。  
 完了した際に ProMicro の赤い LED がつきっぱなしになるのが気になる場合は、一度 USB ケーブルを抜き差しすると赤い LED が消えます。  
