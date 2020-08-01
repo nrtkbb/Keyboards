@@ -161,11 +161,11 @@ uzu42 は QMK Configurator や QMK Toolbox や VIA には対応していない�
 
 正しく qmk_firmware の環境が構築できたら、先に ProMicro にファームウェアを書き込み、正常に書き込める個体かどうかを確認しておきます。  
 ```
-qmk compile -kb uzu42 -kb default
+qmk compile -kb uzu42 -km default
 ```
 とするとビルドが実行されます。
 ```
-$ qmk compile -kb uzu42 -kb default
+$ qmk compile -kb uzu42 -km default
 INFO Compiling keymap with make uzu42:default
 
 
@@ -245,12 +245,12 @@ Checking file size of uzu42_rev1_default.hex                                    
 と表示されればビルドは正しく行えています。  
 書き込みは、
 ```
-qmk flash -kb uzu42 -kb default
+qmk flash -kb uzu42 -km default
 ```
 というコマンドを実行します。  
 すると、以下のようになります。
 ```
-$ qmk flash -kb uzu42 -kb default
+$ qmk flash -kb uzu42 -km default
 INFO Compiling keymap with make uzu42:default:flash
 
 
