@@ -36,6 +36,7 @@
 1. MX互換スイッチ：42個
     - [Switches | 遊舎工房](https://yushakobo.jp/product-category/switches/)
     - [TALP KEYBOARD](https://talpkeyboard.stores.jp/?category_id=59cf8860ed05e668db003f5d)
+    - [Kochi Keyboard](https://kochikeyboard.stores.jp/?category_id=5f79187d07e16366f031382a)
 1. 1Uキーキャップ：42個
     - [Keycaps | 遊舎工房](https://yushakobo.jp/product-category/keycaps/)
     - [TALP KEYBOARD](https://talpkeyboard.stores.jp/?category_id=59be183f428f2d49120007b1)
@@ -55,11 +56,14 @@
         - ショップURL: https://eucalyn.shop/shop/keycaps/taihao-abs-red
         - 参考URL: https://twitter.com/nrtkbb/status/1225423293454241792
 1. TRS or TRRSケーブル：1本
+    - [Kochi Keyboard | TRRSケーブル 1m](https://kochikeyboard.stores.jp/items/5f6f1e13fbe5b52e36663779)
     - [Auxケーブル 0.5M オーディオケーブル 赤 | Amazon](https://www.amazon.co.jp/gp/product/B07N36N7YW)
 1. OLEDモジュール（ピンソケット付き）：2個（オプション）
     - [OLEDモジュール | 遊舎工房](https://yushakobo.jp/shop/oled/) ※ピンソケット付きを選択してください
+    - [OLEDモジュール | Kochi Keyboard](https://kochikeyboard.stores.jp/items/5f66c0edfbe5b5296f9b9bb7)
 1. SK6812MINI：54個（オプション）
-    - [SK6812MINI 35個入り | 遊舎工房](https://yushakobo.jp/shop/sk6812mini-35/) ※54個以上になるようにご購入ください
+    - [SK6812MINI 10個入り | 遊舎工房](https://yushakobo.jp/shop/sk6812mini-10/) ※54個以上になるようにご購入ください
+    - [SK6812MINI 20個 | Kochi Keyboard](https://kochikeyboard.stores.jp/items/5f6632df4b083902e0600acd) ※54個以上になるようにご購入ください
 1. USB-A to Micro-USBケーブル：1本
     - [USB micro ケーブル 赤 | Amazon](https://www.amazon.co.jp/s?k=usb+micro+ケーブル+赤&__mk_ja_JP=カタカナ)
     - [USB Cables | ZAP!CABLES](https://zapcables.com/usb-cables/)
